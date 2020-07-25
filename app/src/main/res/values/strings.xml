@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Your Home</string>
+    <string name="search_bar_hint">Search</string>
+    <string name="room">Room</string>
+</resources>
