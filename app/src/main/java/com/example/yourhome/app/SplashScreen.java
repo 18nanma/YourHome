@@ -1,4 +1,4 @@
-package com.example.yourhome;
+package com.example.yourhome.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.content.Intent;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import com.example.yourhome.R;
+import com.example.yourhome.app.MainActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
