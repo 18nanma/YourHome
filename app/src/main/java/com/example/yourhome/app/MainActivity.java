@@ -4,8 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-
+import android.content.Intent;
 import com.example.yourhome.R;
 import com.example.yourhome.adapter.RoomAdapter;
 import com.example.yourhome.model.ListDetails;
@@ -32,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
         roomAdapter = new RoomAdapter(MainActivity.this, models);
         listView.setAdapter(roomAdapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(), ItemListActivity.class);
+                intent.putExtra("roomId", i);
+                startActivity(intent);
+            }
+        });
+        fab = findViewById(R.id.floating_action_button);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
